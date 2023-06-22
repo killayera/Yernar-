@@ -20,29 +20,10 @@
     position: relative;
 }
 
-.parallax-container2 {
-    width: 100%;
-    height: 470px;
-    /* Adjust the height as needed */
-    overflow: hidden;
-    position: relative;
-}
-
 .parallax-image {
     width: 100%;
     height: 100%;
     background-image: url('life_2.jpg');
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.parallax-image2 {
-    width: 100%;
-    height: 100%;
-    background-image: url('trash-7.jpg');
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -363,53 +344,3 @@ nav .search-icon {
 .text {
     width: 540px;
 }
-
-
-
-
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-    
-    th, td {
-      text-align: left;
-      padding: 8px;
-    }
-    
-    tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-    
-    th {
-      background-color: #333;
-      color: white;
-    }
-
-    .column1 {
-        width: 66.66%;
-      }
-      
-      .column2 {
-        width: 33.33%;
-    }
-
-.footer {
-  background-color: #f0f0f0;
-  text-align: center;
-  padding: 10px;
-  animation: footerAnimation 1s ease-in-out infinite;
-}
-
-@keyframes footerAnimation {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-      
