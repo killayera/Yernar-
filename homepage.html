@@ -2,92 +2,69 @@
 <html lang="en" dir="ltr">
    <head>
       <meta charset="utf-8">
-      <title>KzVolunteers</title>
-      <link rel="stylesheet" href="homepage.css">
+      <link rel="stylesheet" href="style.css">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-      <style>
-         /* Add your custom styles here */
-         /* ... */
-         .nav-items li.active a {
-            position: relative;
-         }
-         .nav-items li.active a::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translateX(-50%);
-            width: 100%;
-            height: 3px;
-            background-color: #ff3d00;
-         }
-         .nav-items li a:hover {
-            text-decoration: none;
-         }
-         .nav-items li a:hover::before {
-            display: none;
-         }
-      </style>
    </head>
    <body>
-      <nav>
-         <div class="menu-icon">
-            <span class="fas fa-bars"></span>
+      <header>
+         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+               <a class="navbar-brand" href="#">
+                  <i class="fas fa-hand-holding-heart"></i>
+                  <span>KzVolunteers</span>
+               </a>
+               <a> l </a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item">
+                        <a class="nav-link" href="homepage.html">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="registration.html">Registration</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+         <div class="content">
+            <header class="space">Responsive Navbar</header>
          </div>
-         <a class="navbar-brand" href="#">
-            <i class="fas fa-hand-holding-heart" style="font-size: 30px; color: #fff;"></i>
-            <span class="logo">KzVolunteers</span>
-         </a>
-         <div class="nav-items">
-            <li><a href="homepage.html" onclick="setActivePage(this)">Main</a></li>
-            <li><a href="events.html" onclick="setActivePage(this)">Events</a></li>
-            <li><a href="registration.html" onclick="setActivePage(this)">Registration</a></li>
-         </div>
-         <div class="cancel-icon">
-            <span class="fas fa-times"></span>
-         </div>
-      </nav>
-      <div class="content">
-         <header class="space"></header>
-         <div class="space text">
-         </div>
-      </div>
+      </header>
+      
+      <!-- Rest of your content -->
+      
+
+      
+      
       <script>
          const menuBtn = document.querySelector(".menu-icon span");
          const cancelBtn = document.querySelector(".cancel-icon");
-         const navBar = document.querySelector(".nav-items");
-         
-         function setActivePage(element) {
-            // Remove active class from all li elements
-            const navItems = document.querySelectorAll(".nav-items li");
-            navItems.forEach(item => {
-               item.classList.remove("active");
-            });
-            
-            // Add active class to the clicked li element
-            element.parentNode.classList.add("active");
-         }
-         
+         const items = document.querySelector(".nav-items");
          menuBtn.onclick = () => {
-            menuBtn.style.opacity = "0";
-            menuBtn.style.pointerEvents = "none";
-            navBar.style.left = "0";
-            cancelBtn.style.opacity = "1";
-            cancelBtn.style.pointerEvents = "auto";
-         };
-         
+            items.classList.add("active");
+            menuBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+         }
          cancelBtn.onclick = () => {
-            menuBtn.style.opacity = "1";
-            menuBtn.style.pointerEvents = "auto";
-            navBar.style.left = "-100%";
-            cancelBtn.style.opacity = "0";
-            cancelBtn.style.pointerEvents = "none";
-         };
-         
-         window.onscroll = () => {
-            this.scrollY > 20 ? navBar.classList.add("sticky") : navBar.classList.remove("sticky");
-         };
+            items.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+            cancelBtn.style.color = "#ff3d00";
+         }
       </script>
+      
+      
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
    </body>
 </html>
+
+      
