@@ -363,3 +363,33 @@ nav .search-icon {
 .text {
     width: 540px;
 }
+
+
+
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    
+    th {
+      background-color: #333;
+      color: white;
+    }
+
+    .column1 {
+        width: 66.66%;
+      }
+      
+      .column2 {
+        width: 33.33%;
+      }

@@ -10,6 +10,81 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
+    <style>
+
+
+table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+      background-color:rgb(24, 29, 49);
+      color:rgb(103, 137, 131);
+    }
+
+    .button-container {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .button {
+      padding: 6px 10px;
+      background-color: #ccc;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+    
+    .image-container {
+      width: 560px;
+    }
+    .image-container1 {
+      width: 200px; /* Set the desired width */
+      height: 150px; /* Set the desired height */
+    }
+
+
+
+
+
+
+
+      .parallax-containers {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 400px; /* Adjust the height as needed */
+        overflow: hidden;
+        position: relative;
+      }
+  
+      .parallax-images {
+        background-image: url('path/to/image.jpg'); /* Replace with the path to your image */
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+  
+      .table-container {
+        display: flex;
+      }
+  
+      .text-side {
+        flex: 1;
+        padding: 20px;
+      }
+    </style>
+
 </head>
 
  
@@ -45,6 +120,102 @@
    <div class="parallax-container2">
        <div class="parallax-image2"></div>
    </div>
+
+    <div class="table-container">
+      <div class="text-side">
+         <table>
+            <tr>
+              <td class="column1">
+                <div>
+                  <h3>Date/time: 12:00</h3>
+                  <h3>What you need: You must come in old clothes so as not to get dirty, you must also have a bag available, you will be given a net for collecting garbage on the spot. At the end of the working day, you will be given food in a pleasant company by the same people with whom you worked today</h3>
+                  <h3>Admin/call: Arslan - 7 775 234 55 64</h3>
+                  <h3>Place: park Astana near by Magnum.</h3>
+                  <br>
+                  <br>
+                  <br>
+                  <div class="button-container">
+                    <button class="button">Maybe I'll come</button>
+                    <button class="button">Button 2</button>
+                  </div>
+                </div>
+              </td>
+              <td class="column2">
+                <div class="image-container">
+                  <img src="volunteers-picking-up-garbage.jpg" alt="Image 1" style="width: 100%; height: 100%;">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <h3>Date/time: 20:00</h3>
+                  <h3>What you need: You should be able to cook soups. Kashi and meatballs. It is also advisable to bring simple food such as bread, milk, and cereals.</h3>
+                  <h3>Admin/call: Yernar - 7 707 994 65 68</h3>
+                  <h3>Place: Under Nurly-Zhol Subway </h3>
+                  <br>
+                  <br>
+                  <br>
+                  <div class="button-container">
+                    <button class="button">Maybe I'll come</button>
+                    <button class="button">Button 2</button>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="image-container">
+                  <img src="volunteers.jpeg" alt="Image 2" style="width: 100%; height: 100%;">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <h3>Date/time: any time from 8.00 - 18.00</h3>
+                  <h3>What you need: You should be able to communicate with children, it is advisable to come for toys, you can also bring things for children that you do not need, and most importantly, a good mood</h3>
+                  <h3>Admin/call: Dayana - 7 747 119 09 02</h3>
+                  <h3>Place: Children's Hospital Number 2</h3>
+                  <br>
+                  <br>
+                  <br>
+                  <div class="button-container">
+                    <button class="button">Maybe I'll come</button>
+                    <button class="button">Button 2</button>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="image-container">
+                  <img src="children.jpeg" alt="Image 3" style="width: 100%; height: 100%;">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <h3>Date/time: 24/7 </h3>
+                  <h3>What you need: The search group has been looking for him since yesterday. In the district of the seventh polyclinic, the boy was called Anuar. He is seven and eight years old and has a yellow T-shirt on his head. Blue pants. He was wearing slippers. The child went to the store for bread and got lost. amount of patience</h3>
+                  <h3>Admin/call: Amir - 7 707 654 78 76</h3>
+                  <h3>Place: Shakarim KudaiberdyUly 21/4 street.</h3>
+                  <br>
+                  <br>
+                  <br>
+                  <div class="button-container">
+                    <button class="button">Maybe I'll come</button>
+                    <button class="button">Button 2</button>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="image-container">
+                  <img src="help.jpg" alt="Image 4" style="width: 100%; height: 100%;">
+                </div>
+              </td>
+            </tr>
+          </table>
+      </div>
+    </div>
+
 
    <script>
       // JavaScript code for audio toggling, parallax effect, and navigation menu
