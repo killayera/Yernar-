@@ -1,70 +1,202 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-   <head>
-      <meta charset="utf-8">
-      <link rel="stylesheet" href="style.css">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-   </head>
-   <body>
-      <header>
-         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-               <a class="navbar-brand" href="#">
-                  <i class="fas fa-hand-holding-heart"></i>
-                  <span>KzVolunteers</span>
-               </a>
-               <a> l </a>
-               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav ml-auto">
-                     <li class="nav-item">
-                        <a class="nav-link" href="homepage.html">Home</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="events.html">Events</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="registration.html">Registration</a>
-                     </li>
-                  </ul>
-               </div>
+
+<head>
+    <meta charset="utf-8">
+    <title>KzVolunteers</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="menu-icon">
+                <span class="fas fa-bars"></span>
             </div>
-         </nav>
-         <div class="content">
-            <header class="space">Responsive Navbar</header>
-         </div>
-      </header>
-      
-      <!-- Rest of your content -->
-      
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-hand-holding-heart" style="font-size: 30px; color: #fff;"></i>
+                <span class="logo">KzVolunteers</span>
+            </a>
+            <!-- Background music audio element -->
+            <div class="nav-items">
+                <li><a href="homepage.html" onclick="setActivePage(this)">Main</a></li>
+                <li><a href="events.html" onclick="setActivePage(this)">Events</a></li>
+                <li><a href="registration.html" onclick="setActivePage(this)">Registration</a></li>
+                <button onclick="toggleAudio()" id="sound-btn">Mute</button>
+                <audio id="background-music" autoplay preload="auto" loop src="chopim.mp3"></audio>
+            </div>
+            <div class="cancel-icon">
+                <span class="fas fa-times"></span>
+            </div>
+        </nav>
+        <div class="content">
+            <header class="space"></header>
+            <div class="space text">
+            </div>
+        </div>
+    </header>
+    <!-- Parallax image container -->
+    <div class="parallax-container">
+        <div class="parallax-image"></div>
+    </div>
 
-      
-      
-      <script>
-         const menuBtn = document.querySelector(".menu-icon span");
-         const cancelBtn = document.querySelector(".cancel-icon");
-         const items = document.querySelector(".nav-items");
-         menuBtn.onclick = () => {
-            items.classList.add("active");
-            menuBtn.classList.add("hide");
-            cancelBtn.classList.add("show");
-         }
-         cancelBtn.onclick = () => {
-            items.classList.remove("active");
-            menuBtn.classList.remove("hide");
-            cancelBtn.classList.remove("show");
-            cancelBtn.style.color = "#ff3d00";
-         }
-      </script>
-      
-      
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-   </body>
+
+    <section class="about-us">
+        <div class="about">
+            <div class="text">
+                <h1 class="headings">About us </h1>
+                <p>We are KZVolunteers, a socially conscious company that organizes voluntary events, provides financial assistance to those in need, and promotes nature and ecology. Through our voluntary events, we offer opportunities for individuals to dedicate their time and skills towards creating positive change. By raising funds, we provide support to those facing challenging circumstances and advocate for environmental conservation. Our event registration platform makes it easy for people to get involved and participate in special initiatives.</p>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- News content -->
+    <div class="news-container">
+        <div class="news-item">
+            <h3 class="headings">A very generous person donated 50,000 tenge to firefighters</h3>
+<br>
+            There are multiple fires in Kazakhstan. Some very nice person voluntarily donated 50,000 tenge for food, water for firefighters
+            <div class="photo-container">
+                <img src="tenge.jpg" alt="News Image 1">
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="news-item">
+            <h3 class="headings">"91" musical group became ambassadors for UNICEF</h3>
+            <p>91 intend to take on the problem of children's rights, bullying among children, including because of their appearance. </p>
+            <div class="photo-container">
+                <img src="91.jpg" alt="News Image 2">
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="news-item">
+            <h3 class="headings">Elena Rybakina donated to young tennis players</h3>
+            <p>She provided financial support to 14 young Kazakh tennis players, transferring 2.5 million tenge to each of her Wimbledon prize money. In total, it turns out that juniors received 35 million tenge.</p>
+            <div class="photo-container">
+                <img src="rybakina.jpg" alt="News Image 3">
+            </div>
+        </div>
+
+
+
+        <div class="news-item">
+            <h3 class="headings">"Qazmed" volunteer organization collected money for Chingiz</h3>
+            <p> Qazmed's fundraising campaign for Chingiz has been a tremendous success. We have collected the necessary funds to assist Chingiz, who faces serious disease.</p>
+            <div class="photo-container">
+                <img src="medik.jpg" alt="News Image 3">
+            </div>
+        </div>
+    </div>
+
+
+        <footer>
+            <section class="about-us">
+                <div class="about">
+                    <div class="text">
+                        <h1 class="headings">Contact us </h1>
+                        <p>If you have any questions or would like to get involved, feel free to reach out to us.</p>
+                        <ul class="contact-info">
+                            <li>Email: info@volunteerskz.com</li>
+                            <li>Phone: +7 778 913 51 75</li>
+                            <li>Address: 12 Mangilik Yel, Astana, Nur-Sultan</li>
+                            <li><a href="aa.pdf" target="_blank">Terms of Use</a></li>
+                            <div class="copyright">
+                                <p>&copy; 2023 KzVolunteers. All rights reserved.</p>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+
+
+
+
+
+
+
+        <script>
+            // JavaScript code for audio toggling, parallax effect, and navigation menu
+            function toggleAudio() {
+                var audio = document.getElementById('background-music');
+                var soundBtn = document.getElementById('sound-btn');
+
+                if (audio.paused) {
+                    audio.play();
+                    soundBtn.textContent = 'Mute';
+                } else {
+                    audio.pause();
+                    soundBtn.textContent = 'Unmute';
+                }
+            }
+            // Animation
+            window.addEventListener('scroll', function() {
+                var parallaxImage = document.querySelector('.parallax-image');
+                var scrollPosition = window.pageYOffset;
+
+                parallaxImage.style.transform = 'translateY(' + scrollPosition * 0.4 + 'px)';
+            });
+
+
+
+            const menuBtn = document.querySelector(".menu-icon span");
+            const cancelBtn = document.querySelector(".cancel-icon");
+            const navBar = document.querySelector(".nav-items");
+            // Remove active class from all li elements
+            function setActivePage(element) {
+                // Remove active class from all li elements
+                const navItems = document.querySelectorAll(".nav-items li");
+                navItems.forEach(item => {
+                    item.classList.remove("active");
+                });
+
+                // Add active class to the clicked li element
+                element.parentNode.classList.add("active");
+            }
+
+            menuBtn.onclick = () => {
+                menuBtn.style.opacity = "0";
+                menuBtn.style.pointerEvents = "none";
+                navBar.style.left = "0";
+                cancelBtn.style.opacity = "1";
+                cancelBtn.style.pointerEvents = "auto";
+            };
+
+            cancelBtn.onclick = () => {
+                menuBtn.style.opacity = "1";
+                menuBtn.style.pointerEvents = "auto";
+                navBar.style.left = "-100%";
+                cancelBtn.style.opacity = "0";
+                cancelBtn.style.pointerEvents = "none";
+            };
+
+            window.onscroll = () => {
+                this.scrollY > 20 ? navBar.classList.add("sticky") : navBar.classList.remove("sticky");
+            };
+
+        </script>
+</body>
+
 </html>
-
-      
